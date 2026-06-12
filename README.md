@@ -22,6 +22,14 @@ Each function returns NULL when any of its arguments is NULL.
 - DuckDB 1.2 or newer
 - Python 3 with the `duckdb` and `duckdb_sqllogictest` packages (only required to run the tests)
 
+## Download
+
+A prebuilt binary is attached to each release. The latest build for `linux_amd64_gcc4` against DuckDB 1.2.0 is available here:
+
+- [strduck-linux_amd64_gcc4-duckdb1.2.0.duckdb_extension](https://github.com/ChronoCoders/zig-duckdb/releases/download/v0.1.0/strduck-linux_amd64_gcc4-duckdb1.2.0.duckdb_extension) (v0.1.0)
+
+See the [releases page](https://github.com/ChronoCoders/zig-duckdb/releases) for all versions. To build for any other platform, follow the instructions below.
+
 ## Building
 
 The DuckDB headers and prebuilt library are downloaded automatically by the Zig build system.
