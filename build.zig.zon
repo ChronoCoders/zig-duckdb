@@ -1,0 +1,38 @@
+.{
+    .name = "strduck",
+    .version = "0.1.0",
+    .minimum_zig_version = "0.13.0",
+    .dependencies = .{
+        .libduckdb_linux_amd64 = .{
+            .url = "https://github.com/duckdb/duckdb/releases/download/v1.2.0/libduckdb-linux-amd64.zip",
+            .hash = "1220e6c1d88be594a0f8a83eb21332b9ec843f44159f3499ebaec43b5cb3f37aa8b5",
+            .lazy = true,
+        },
+        .libduckdb_linux_arm64 = .{
+            .url = "https://github.com/duckdb/duckdb/releases/download/v1.2.0/libduckdb-linux-aarch64.zip",
+            .hash = "122032b0661127cb8068746c44770ff48e71f80d248e6d603df1020af7d377c80392",
+            .lazy = true,
+        },
+        .libduckdb_osx = .{
+            .url = "https://github.com/duckdb/duckdb/releases/download/v1.2.0/libduckdb-osx-universal.zip",
+            .hash = "1220b09740e80bb5b09b3b7df419b0e4406ffefef2e03f1fbcb4efaf597e0f41b818",
+            .lazy = true,
+        },
+        .libduckdb_windows_amd64 = .{
+            .url = "https://github.com/duckdb/duckdb/releases/download/v1.2.0/libduckdb-windows-amd64.zip",
+            .hash = "12205be2e6f177aa81b6e95e4872bbd51c6d43e8892b7b70230fda647ad678b0613d",
+            .lazy = true,
+        },
+        .libduckdb_windows_arm64 = .{
+            .url = "https://github.com/duckdb/duckdb/releases/download/v1.2.0/libduckdb-windows-arm64.zip",
+            .hash = "122064b68e5087c1683fced9b272f255fb1acfa68128211ad08fb9038a1f09d7ad74",
+            .lazy = true,
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "test",
+    },
+}

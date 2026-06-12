@@ -1,0 +1,58 @@
+# name: test/sql/strduck.test
+# description: Test the strduck extension
+# group: [strduck]
+
+statement error
+SELECT str_reverse('hello')
+----
+Catalog Error
+
+require strduck
+
+statement ok
+PRAGMA enable_verification
+
+query I
+SELECT str_reverse('hello')
+----
+olleh
+
+query I
+SELECT str_reverse('')
+----
+(empty)
+
+query I
+SELECT str_reverse(NULL)
+----
+NULL
+
+query I
+SELECT str_count('abcabc', 'bc')
+----
+2
+
+query I
+SELECT str_count('hello', 'x')
+----
+0
+
+query I
+SELECT str_count(NULL, 'a')
+----
+NULL
+
+query I
+SELECT str_truncate('hello world', 5, '...')
+----
+hello...
+
+query I
+SELECT str_truncate('hi', 10, '...')
+----
+hi
+
+query I
+SELECT str_truncate(NULL, 5, '...')
+----
+NULL
