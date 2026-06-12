@@ -24,9 +24,10 @@ Each function returns NULL when any of its arguments is NULL.
 
 ## Download
 
-A prebuilt binary is attached to each release. The latest build for `linux_amd64_gcc4` against DuckDB 1.2.0 is available here:
+Prebuilt binaries are attached to each release, built against DuckDB 1.2.0:
 
 - [strduck-linux_amd64_gcc4-duckdb1.2.0.duckdb_extension](https://github.com/ChronoCoders/zig-duckdb/releases/download/v0.1.0/strduck-linux_amd64_gcc4-duckdb1.2.0.duckdb_extension) (v0.1.0)
+- [strduck-osx_arm64-duckdb1.2.0.duckdb_extension](https://github.com/ChronoCoders/zig-duckdb/releases/download/v0.1.0/strduck-osx_arm64-duckdb1.2.0.duckdb_extension) (v0.1.0)
 
 See the [releases page](https://github.com/ChronoCoders/zig-duckdb/releases) for all versions. To build for any other platform, follow the instructions below.
 
