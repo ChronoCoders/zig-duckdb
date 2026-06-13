@@ -24,12 +24,15 @@ Each function returns NULL when any of its arguments is NULL.
 
 ## Download
 
-Prebuilt binaries are attached to each release, built against DuckDB 1.2.0:
+Prebuilt binaries for the v0.1.0 release are attached, built against DuckDB 1.2.0:
 
-- [strduck-linux_amd64_gcc4-duckdb1.2.0.duckdb_extension](https://github.com/ChronoCoders/zig-duckdb/releases/download/v0.1.0/strduck-linux_amd64_gcc4-duckdb1.2.0.duckdb_extension) (v0.1.0)
-- [strduck-osx_arm64-duckdb1.2.0.duckdb_extension](https://github.com/ChronoCoders/zig-duckdb/releases/download/v0.1.0/strduck-osx_arm64-duckdb1.2.0.duckdb_extension) (v0.1.0)
+- [linux_amd64_gcc4](https://github.com/ChronoCoders/zig-duckdb/releases/download/v0.1.0/strduck-linux_amd64_gcc4-duckdb1.2.0.duckdb_extension)
+- [linux_arm64_gcc4](https://github.com/ChronoCoders/zig-duckdb/releases/download/v0.1.0/strduck-linux_arm64_gcc4-duckdb1.2.0.duckdb_extension)
+- [osx_arm64](https://github.com/ChronoCoders/zig-duckdb/releases/download/v0.1.0/strduck-osx_arm64-duckdb1.2.0.duckdb_extension)
+- [windows_amd64](https://github.com/ChronoCoders/zig-duckdb/releases/download/v0.1.0/strduck-windows_amd64-duckdb1.2.0.duckdb_extension)
+- [windows_arm64](https://github.com/ChronoCoders/zig-duckdb/releases/download/v0.1.0/strduck-windows_arm64-duckdb1.2.0.duckdb_extension)
 
-See the [releases page](https://github.com/ChronoCoders/zig-duckdb/releases) for all versions. To build for any other platform, follow the instructions below.
+See the [releases page](https://github.com/ChronoCoders/zig-duckdb/releases) for all versions. To build for another platform, follow the instructions below.
 
 ## Building
 
