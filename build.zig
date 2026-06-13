@@ -110,7 +110,7 @@ pub fn build(b: *Build) void {
     metadata.addArgs(&.{
         platform.name,
         b.fmt("v{s}", .{duckdb_version}),
-        "v0.1.0",
+        "v0.2.0",
     });
 
     const install_dir: Build.InstallDir = .{ .custom = b.fmt("v{s}/{s}", .{ duckdb_version, platform.name }) };
