@@ -56,3 +56,79 @@ query I
 SELECT str_truncate(NULL, 5, '...')
 ----
 NULL
+
+# Edge cases: multibyte UTF-8 is reversed by codepoint, not by byte
+
+query I
+SELECT str_reverse('naïve')
+----
+evïan
+
+query I
+SELECT str_reverse('🦆duck')
+----
+kcud🦆
+
+# Edge cases: occurrences are counted without overlap
+
+query I
+SELECT str_count('aaaa', 'aa')
+----
+2
+
+query I
+SELECT str_count('aaa', 'aa')
+----
+1
+
+query I
+SELECT str_count('abc', 'abc')
+----
+1
+
+query I
+SELECT str_count('hi', 'hello')
+----
+0
+
+query I
+SELECT str_count('abc', '')
+----
+0
+
+query I
+SELECT str_count('abc', NULL)
+----
+NULL
+
+# Edge cases: truncation counts characters and handles boundary lengths
+
+query I
+SELECT str_truncate('héllo', 2, '..')
+----
+hé..
+
+query I
+SELECT str_truncate('hello', 5, '...')
+----
+hello
+
+query I
+SELECT str_truncate('hello', -1, '...')
+----
+...
+
+query I
+SELECT str_truncate('hello', 3, '')
+----
+hel
+
+query I
+SELECT str_truncate('hello', NULL, '...')
+----
+NULL
+
+query I
+SELECT str_truncate('hello', 3, NULL)
+----
+NULL
